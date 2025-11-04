@@ -1,27 +1,21 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBackground from "@/assets/hero-bg.jpg";
-
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${heroBackground})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+      <div className="absolute inset-0 z-0" style={{
+      backgroundImage: `url(${heroBackground})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center"
+    }}>
         <div className="absolute inset-0 bg-background/80" />
       </div>
 
       {/* Radial Gradient Overlay */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{ background: "var(--gradient-radial)" }}
-      />
+      <div className="absolute inset-0 z-0" style={{
+      background: "var(--gradient-radial)"
+    }} />
 
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10 text-center">
@@ -38,20 +32,11 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-            <Button 
-              size="lg" 
-              className="glow-blue text-lg px-8 py-6 group"
-            >
+            <Button size="lg" className="glow-blue text-lg px-8 py-6 group">
               Let's Fix It Together
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="text-lg px-8 py-6 border-primary/50 hover:border-primary"
-            >
-              View Our Work
-            </Button>
+            
           </div>
 
           {/* Tagline */}
@@ -67,8 +52,6 @@ const HeroSection = () => {
           <div className="w-1 h-3 bg-primary rounded-full animate-pulse" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
