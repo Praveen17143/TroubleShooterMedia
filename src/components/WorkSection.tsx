@@ -27,7 +27,7 @@ const WorkSection = () => {
     },
     {
       name: "NightShift Episode 12",
-      client: "Internal Creative",
+      client: "Filmable",
       metric: "50K+ Views",
       description: "Business culture deep-dive with a tech entrepreneur",
       category: "Creative Studio",
