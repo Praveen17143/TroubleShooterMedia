@@ -32,9 +32,11 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-            <Button size="lg" className="glow-blue text-lg px-8 py-6 group">
-              Let's Fix It Together
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+            <Button size="lg" className="glow-blue text-lg px-8 py-6 group" asChild>
+              <a href="#contact">
+                Let's Fix It Together
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
             
           </div>
