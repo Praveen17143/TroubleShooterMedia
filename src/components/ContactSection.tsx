@@ -5,25 +5,25 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Card } from "@/components/ui/card";
-
 const ContactSection = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     company: "",
-    message: "",
+    message: ""
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: "Missing Information",
         description: "Please fill in all required fields.",
-        variant: "destructive",
+        variant: "destructive"
       });
       return;
     }
@@ -31,24 +31,24 @@ const ContactSection = () => {
     // Simulate form submission
     toast({
       title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
+      description: "We'll get back to you within 24 hours."
     });
 
     // Reset form
-    setFormData({ name: "", email: "", company: "", message: "" });
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
     setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
+      name: "",
+      email: "",
+      company: "",
+      message: ""
     });
   };
-
-  return (
-    <section id="contact" className="py-24 md:py-32 bg-muted/20">
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+  return <section id="contact" className="py-24 md:py-32 bg-muted/20">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
@@ -69,7 +69,7 @@ const ContactSection = () => {
                   <Mail className="w-6 h-6 text-primary" />
                   <h3 className="text-xl font-semibold">Email Us</h3>
                 </div>
-                <p className="text-muted-foreground">hello@troubleshootermedia.com</p>
+                <p className="text-muted-foreground">praveen@troubleshootermedia.com</p>
               </div>
 
               <div>
@@ -101,61 +101,28 @@ const ContactSection = () => {
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
                     Name *
                   </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Your name"
-                    required
-                    className="bg-background/50"
-                  />
+                  <Input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Your name" required className="bg-background/50" />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-2">
                     Email *
                   </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="your@email.com"
-                    required
-                    className="bg-background/50"
-                  />
+                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="your@email.com" required className="bg-background/50" />
                 </div>
 
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium mb-2">
                     Company
                   </label>
-                  <Input
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    placeholder="Your company name"
-                    className="bg-background/50"
-                  />
+                  <Input id="company" name="company" value={formData.company} onChange={handleChange} placeholder="Your company name" className="bg-background/50" />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-2">
                     Message *
                   </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Tell us about your project or challenge..."
-                    rows={4}
-                    required
-                    className="bg-background/50"
-                  />
+                  <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Tell us about your project or challenge..." rows={4} required className="bg-background/50" />
                 </div>
 
                 <Button type="submit" className="w-full glow-blue group">
@@ -167,8 +134,6 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
