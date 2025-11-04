@@ -16,7 +16,7 @@ const ContactSection = () => {
     message: ""
   });
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
@@ -35,12 +35,13 @@ const ContactSection = () => {
     });
 
     // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      message: ""
-    });
+
+        setFormData({
+      		name: "",
+      		email: "",
+      		company: "",
+      		message: ""
+    	});  
   };
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -96,7 +97,7 @@ const ContactSection = () => {
 
             {/* Contact Form */}
             <Card className="bg-card/50 border-border p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6" netlify>
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
                     Name *
