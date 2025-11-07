@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+const HatIcon = () => (
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 24h24v2H4v-2zm2-4c0-2 1.5-3 4-4l6-8 6 8c2.5 1 4 2 4 4H6z" fill="currentColor"/>
+    <ellipse cx="16" cy="14" rx="3" ry="2" fill="currentColor"/>
+  </svg>
+);
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -28,7 +35,10 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="text-2xl font-bold gradient-text">TroubleShooterMedia</a>
+          <a href="#" className="flex items-center gap-2 text-xl font-bold text-foreground hover:text-primary transition-colors">
+            <HatIcon />
+            TroubleShooterMedia
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">

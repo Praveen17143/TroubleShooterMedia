@@ -37,52 +37,36 @@ const AboutSection = () => {
 
           {/* Right: Story */}
           <div className="space-y-6 animate-slide-in order-1 lg:order-2">
-            <h2 className="text-4xl md:text-6xl font-bold">
-              Where Creativity Meets{" "}
-              <span className="gradient-text">Process</span>
+            <h2 className="text-4xl md:text-6xl font-bold text-foreground">
+              Where Creativity Meets Performance
             </h2>
             
             <div className="space-y-4 text-lg text-muted-foreground">
               <p>
-                TroubleShooter Media was born from a simple observation: most marketing 
-                agencies are either too creative or too analytical. We refuse to choose.
+                We're a hybrid marketing agency that blends creative storytelling with 
+                data-driven strategy to deliver measurable results.
               </p>
               
               <p>
-                We're a hybrid marketing agency that partners with B2B tech, digital-first, 
-                and modern consumer brands to deliver product-driven marketing execution.
+                Our approach combines operational rigor with creative excellence, 
+                building systems that perform at scale.
               </p>
-              
-              <p>
-                Our team blends creative DNA with operational rigor. We run our own creative 
-                projects like <span className="text-secondary font-semibold">NightShift</span> and{" "}
-                <span className="text-secondary font-semibold">Things Troubleshooter</span>, 
-                keeping our pulse on culture while building high-performing systems for our clients.
-              </p>
-            </div>
-
-            <div className="pt-8">
-              <h3 className="text-2xl font-bold mb-4">Our Philosophy</h3>
-              <blockquote className="border-l-4 border-primary pl-6 italic text-xl text-foreground">
-                "Every marketing problem is just an unoptimized system waiting to be fixed."
-              </blockquote>
             </div>
           </div>
         </div>
 
         {/* Values */}
         <div className="mt-24">
-          <h3 className="text-3xl font-bold text-center mb-12">What Drives Us</h3>
           <div className="grid md:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <Card
                 key={index}
-                className="bg-card/50 border-border hover:border-primary/50 transition-all duration-300 hover-scale p-8 text-center"
+                className="bg-card/50 border-2 border-primary/20 hover:border-primary transition-all p-8 text-center"
               >
-                <div className="inline-flex p-4 rounded-full bg-primary/10 text-primary mb-6">
+                <div className="inline-flex p-4 rounded-full bg-primary/10 text-primary mb-4">
                   {value.icon}
                 </div>
-                <h4 className="text-xl font-bold mb-3">{value.title}</h4>
+                <h4 className="text-xl font-bold mb-2 text-foreground">{value.title}</h4>
                 <p className="text-muted-foreground">{value.description}</p>
               </Card>
             ))}
