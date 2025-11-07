@@ -1,6 +1,6 @@
 import { Target, Lightbulb, Rocket } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import studioWorkspace from "@/assets/studio-workspace.jpg";
+import studioWorkspace from "@/assets/workspace-hat-person.jpg";
 
 const AboutSection = () => {
   const values = [
