@@ -53,8 +53,8 @@ const ServicesSection = () => {
     <section id="services" className="py-24 md:py-32">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-foreground mb-4">Our Services</h2>
-          <p className="text-4xl md:text-5xl text-muted-foreground">Here's What We Offer</p>
+          <h2 className="text-3xl font-bold gradient-royal-text mb-4">Our Services</h2>
+          <p className="text-4xl md:text-5xl text-foreground/90">Here's What We Offer</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start mb-24">
@@ -63,7 +63,7 @@ const ServicesSection = () => {
             <img
               src={serviceImage}
               alt="Our Services"
-              className="rounded-lg shadow-xl w-full"
+              className="rounded-lg border-ornate w-full"
             />
           </div>
 
@@ -73,15 +73,15 @@ const ServicesSection = () => {
             {marketingServices.map((service, index) => (
               <Card 
                 key={index} 
-                className="bg-card/50 border-2 border-primary/30 p-6 hover:border-primary transition-all"
+                className="royal-card p-6 hover:border-primary/50 transition-all hover:shadow-gold"
               >
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-primary/10 text-primary">
+                  <div className="p-3 rounded-lg bg-primary/20 text-primary border border-primary/30">
                     {service.icon}
                   </div>
                   <div>
                     <h4 className="text-xl font-bold text-foreground mb-2">{service.title}</h4>
-                    <p className="text-muted-foreground">{service.description}</p>
+                    <p className="text-foreground/70">{service.description}</p>
                   </div>
                 </div>
               </Card>
@@ -98,11 +98,11 @@ const ServicesSection = () => {
             {creativeServices.map((service, index) => (
               <Card 
                 key={index} 
-                className="bg-card/50 border-2 border-primary/30 hover:border-primary transition-all p-6"
+                className="royal-card hover:border-primary/50 transition-all hover:shadow-gold p-6"
               >
                 <div className="text-primary mb-4">{service.icon}</div>
                 <h4 className="text-xl font-bold text-foreground mb-2">{service.title}</h4>
-                <p className="text-muted-foreground">{service.description}</p>
+                <p className="text-foreground/70">{service.description}</p>
               </Card>
             ))}
           </div>
