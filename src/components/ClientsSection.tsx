@@ -18,24 +18,28 @@ const ClientsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+    <section className="py-20 bg-royal-navy-light relative overflow-hidden">
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-10 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      </div>
+      <div className="container mx-auto px-6 relative z-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 gradient-royal-text">
           Our Clients
         </h2>
 
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden py-8">
           <div className="flex animate-scroll">
             {/* First set of logos */}
             {clients.map((client, index) => (
               <div
                 key={`first-${index}`}
-                className="flex-shrink-0 mx-8 w-32 h-32 flex items-center justify-center"
+                className="flex-shrink-0 mx-8 w-32 h-32 flex items-center justify-center p-4 rounded-lg bg-card/30 border border-primary/20 hover:border-primary/50 transition-all"
               >
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  className="max-w-full max-h-full object-contain opacity-70 hover:opacity-100 transition-all duration-300 filter brightness-125"
                 />
               </div>
             ))}
@@ -43,12 +47,12 @@ const ClientsSection = () => {
             {clients.map((client, index) => (
               <div
                 key={`second-${index}`}
-                className="flex-shrink-0 mx-8 w-32 h-32 flex items-center justify-center"
+                className="flex-shrink-0 mx-8 w-32 h-32 flex items-center justify-center p-4 rounded-lg bg-card/30 border border-primary/20 hover:border-primary/50 transition-all"
               >
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  className="max-w-full max-h-full object-contain opacity-70 hover:opacity-100 transition-all duration-300 filter brightness-125"
                 />
               </div>
             ))}

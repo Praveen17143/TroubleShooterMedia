@@ -31,7 +31,7 @@ const Navigation = () => {
     name: "Contact",
     href: "#contact"
   }];
-  return <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-card/80 backdrop-blur-lg border-b border-border" : "bg-transparent"}`}>
+  return <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-card/95 backdrop-blur-lg border-b border-primary/30 shadow-gold" : "bg-transparent"}`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -45,7 +45,7 @@ const Navigation = () => {
             {navLinks.map(link => <a key={link.name} href={link.href} className="text-foreground hover:text-primary transition-colors duration-200">
                 {link.name}
               </a>)}
-            <Button variant="default" className="glow-blue">
+            <Button variant="default" className="glow-gold">
               Let's Fix It →
             </Button>
           </div>
@@ -61,7 +61,7 @@ const Navigation = () => {
             {navLinks.map(link => <a key={link.name} href={link.href} className="text-foreground hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                 {link.name}
               </a>)}
-            <Button variant="default" className="w-full glow-blue">
+            <Button variant="default" className="w-full glow-gold">
               Let's Fix It →
             </Button>
           </div>}

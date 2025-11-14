@@ -57,6 +57,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "royal-gold": "hsl(var(--royal-gold))",
+        "royal-navy": "hsl(var(--royal-navy))",
+        "royal-navy-light": "hsl(var(--royal-navy-light))",
+        "ornate-gold": "hsl(var(--ornate-gold))",
       },
       borderRadius: {
         lg: "var(--radius)",

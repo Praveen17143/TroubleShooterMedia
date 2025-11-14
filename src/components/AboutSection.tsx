@@ -27,21 +27,21 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
           {/* Left: Image */}
           <div className="relative animate-fade-in order-2 lg:order-1">
-            <div className="absolute inset-0 bg-secondary/20 blur-3xl animate-pulse-glow" />
+            <div className="absolute inset-0 bg-primary/10 blur-3xl animate-pulse-glow" />
             <img
               src={studioWorkspace}
               alt="TroubleShooter Studio"
-              className="relative rounded-lg shadow-2xl hover-scale"
+              className="relative rounded-lg border-ornate hover-scale"
             />
           </div>
 
           {/* Right: Story */}
           <div className="space-y-6 animate-slide-in order-1 lg:order-2">
-            <h2 className="text-4xl md:text-6xl font-bold text-foreground">
+            <h2 className="text-4xl md:text-6xl font-bold gradient-royal-text">
               Where Creativity Meets Performance
             </h2>
             
-            <div className="space-y-4 text-lg text-muted-foreground">
+            <div className="space-y-4 text-lg text-foreground/80">
               <p>
                 We're a hybrid marketing agency that blends creative storytelling with 
                 data-driven strategy to deliver measurable results.
@@ -61,13 +61,13 @@ const AboutSection = () => {
             {values.map((value, index) => (
               <Card
                 key={index}
-                className="bg-card/50 border-2 border-primary/20 hover:border-primary transition-all p-8 text-center"
+                className="royal-card hover:border-primary/50 transition-all hover:shadow-gold p-8 text-center"
               >
-                <div className="inline-flex p-4 rounded-full bg-primary/10 text-primary mb-4">
+                <div className="inline-flex p-4 rounded-full bg-primary/20 text-primary mb-4 border border-primary/30">
                   {value.icon}
                 </div>
                 <h4 className="text-xl font-bold mb-2 text-foreground">{value.title}</h4>
-                <p className="text-muted-foreground">{value.description}</p>
+                <p className="text-foreground/70">{value.description}</p>
               </Card>
             ))}
           </div>
